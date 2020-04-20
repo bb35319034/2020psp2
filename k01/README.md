@@ -38,4 +38,38 @@ while文でデータを一つずつ増やしながら平均と分散を出す。
 
 ## 修正履歴
 
-説明は「かきくけこ」だ！
+- `gcc -o k01 k01.c -W -Wall`というように`-W`と`-Wall`のオプションをつけてコンパイルしてみてください．warningがたくさん出ると思います．
+  これらを直してから提出するように今後はしてください．
+- `warning: 'square_ave' may be used uninitialized in this function` は，
+  「この関数で'square_ave'がおそらく初期化されずに使われている」という警告です．
+  `double square_ave;`と書いているところで，`double square_ave=なんらかの値`というように初期化せよと言われています．
+  もし，入力されたファイルが，1行もデータが入っていないとき，最後のprintfで表示するave,var,un_varは何を表示するのが適切ですか？un_varの計算で使うNはどうなりますか？初期化しない変数に元々入っている値は不定値です．ゼロとは限りません．上述のオプション付きでコンパイルし，警告が全くでないところまで直してください．
+- ソースコードの最初のほうに，
+  
+  ```
+  extern double ave_online(double val,double ave,int N)
+  {
+    return(((N-1)*ave/N)+(val/N));
+  }
+  ```
+
+  このようなものがありますが，これはNGです．
+
+  ```
+  extern double ave_online(double val, double ave, int N);
+
+  int main(void)
+  {
+      ....
+  }
+
+  double ave_online(double val, double ave, int N)
+  {
+      ...
+  }
+  ```
+
+  のようにmain関数の前に`extern`のついたプロトタイプ宣言（関数本体の1行目．いわゆる入出力型の指定）を書き，関数本体は別に書きます．
+
+  もしくは，`extern`をつけないで関数本体をmain関数の前に書いてもいいですが，`extern`付きの関数本体はNGです．
+
