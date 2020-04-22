@@ -17,7 +17,6 @@ int main(void)
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
-    int gen;
     int N;
     double ave,var,square_ave,unvar;
     FILE* fp;
@@ -33,13 +32,13 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    fgets(buf,sizeof(buf),fp);
     while(fgets(buf,sizeof(buf),fp) != NULL){
-        sscanf(buf,"%d, %lf",&gen,&val);
+        sscanf(buf,"%lf",&val);
         N++;
         var = var_online(val,ave,square_ave,N);
         ave = ave_online(val,ave,N);
         square_ave = ave_online(pow(val,2),square_ave,N);
+        
 
     }
 
