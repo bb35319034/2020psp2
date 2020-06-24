@@ -3,22 +3,16 @@
 #include <string.h>
 #include <math.h>
 
-extern double ave_online(double val,double ave,int N)
-{
-    return(((N-1)*ave/N)+(val/N));
-}
+extern double ave_online(double val,double ave,int N);
+extern double var_online(double val,double ave,double square_ave,int N);
 
-extern double var_online(double val,double ave,double square_ave,int N)
-{
-    return (((N-1)*square_ave/N)+pow(val,2)/N)-pow((((N-1)*ave/N)+(val/N)),2);
-}
 int main(void)
 {
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
-    int N;
-    double ave,var,square_ave,unvar;
+    int N=0;
+    double ave=0,var,square_ave,unvar;
     FILE* fp;
 
     printf("input the filename of sample:");
@@ -51,10 +45,19 @@ int main(void)
 
     printf("ave=%lf\n",ave);
     printf("var=%lf\n",var);
-    printf("unvar=%lf\n",unvar);
+    printf("est ave=%lf\n",ave);
+    printf("est var=%lf\n",unvar);
 
     return 0;
 
 
 }
 
+    double ave_online(double val, double ave, int N)
+    {
+        return (((N-1)*ave/N)+(val/N));
+    }
+    double var_online(double val, double ave, double square_ave, int N)
+    {
+        return (((N-1)*square_ave/N)+pow(val,2)/N)-pow((((N-1)*ave/N)+(val/N)),2);
+    }
