@@ -1,6 +1,6 @@
 # 課題2 レポート
 
-aa83988848 薗田光太郎
+bb35319034 林健太郎
 
 ## 課題
 
@@ -22,7 +22,12 @@ aa83988848 薗田光太郎
 ## ソースコードの説明
 A県、B県それぞれの平均と分散を用いて標本化した値を出す。
 標本化した値を用いて、A県、B県それぞれの尤度を求める。
-大小関係に注目してif文を用いて、大きい方をL_A、小さい方をL_Bに代入した。
+
+出力結果：
+input the filename of sample:c:\Users\admin\Documents\2020psp2\sample\heights_male.csv
+the filename of sample: c:\Users\admin\Documents\2020psp2\sample\heights_male.csv
+L_A: 0.000006
+L_B: 0.000002
 
 ## 修正履歴
 [comment0624宮下]

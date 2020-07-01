@@ -8,7 +8,7 @@ extern double p_stdnorm(double z);
 
 int main(void)
 {
-    double val, zA, zB, max_val, min_val;
+    double val, zA, zB;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
@@ -35,24 +35,14 @@ int main(void)
         L2 = L2 * p_stdnorm(zB);
     }
 
-    if(L1<L2)
-    {
-        max_val = L2;
-        min_val = L1;
-    }
-    else
-    {
-        max_val = L1;
-        min_val = L2;
-    }
     
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+    printf("L_A: %f\n",L1);
+    printf("L_B: %f\n",L2);
 
     return 0;
 
