@@ -39,6 +39,15 @@ while文でデータを一つずつ増やしながら平均と分散を出す。
 while文でデータを一つずつ増やしながら平均と分散を出す。
 不偏分散を分散を使って出す。
 
+母集団の平均の推定値は、標本平均が最良なので、値の合計をNで割った値になる。
+出力結果：
+input the filename of sample:c:\Users\admin\Documents\2020psp2\sample\heights_male.csv
+the filename of sample: c:\Users\admin\Documents\2020psp2\sample\heights_male.csv
+ave=173.888750
+var=25.361711
+est ave=173.888750
+est var=28.984813
+
 ## 修正履歴
 
 - `gcc -o k01 k01.c -W -Wall`というように`-W`と`-Wall`のオプションをつけてコンパイルしてみてください．warningがたくさん出ると思います．

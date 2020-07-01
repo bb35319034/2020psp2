@@ -12,7 +12,7 @@ int main(void)
     char fname[FILENAME_MAX];
     char buf[256];
     int N=0;
-    double ave=0,var,square_ave,unvar;
+    double ave=0,var,square_ave,unvar,sum,est_ave;
     FILE* fp;
 
     printf("input the filename of sample:");
@@ -32,11 +32,12 @@ int main(void)
         var = var_online(val,ave,square_ave,N);
         ave = ave_online(val,ave,N);
         square_ave = ave_online(pow(val,2),square_ave,N);
-        
+        sum += val;        
 
     }
 
     unvar = N*var/(N-1);
+    est_ave = sum/N;
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
@@ -45,7 +46,7 @@ int main(void)
 
     printf("ave=%lf\n",ave);
     printf("var=%lf\n",var);
-    printf("est ave=%lf\n",ave);
+    printf("est ave=%lf\n",est_ave);
     printf("est var=%lf\n",unvar);
 
     return 0;
