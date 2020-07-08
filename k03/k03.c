@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 extern double r_unif(void);
@@ -27,12 +28,13 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
 
-
     
 
 
 
     }
+
+
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
