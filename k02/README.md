@@ -42,10 +42,13 @@ Likelihood for B：
     -L1は「身長xの人がA県で生まれた20代の男性である確率(L_A)」を意味しています。(L2はB県)よって大小で入れ替える必要はありません。
 - 入出力結果をレポートに記載してください。下のようになるはずです。
 
-'''
+```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
 L_A：0.000006
 L_B：0.000002
-'''
+```
 
+[comment0708宮下]
+
+修正点はありません。k02は完了です。
