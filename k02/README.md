@@ -29,6 +29,13 @@ the filename of sample: c:\Users\admin\Documents\2020psp2\sample\heights_male.cs
 L_A: 0.000006
 L_B: 0.000002
 
+## 入出力結果
+
+```
+Likelihood for A：
+Likelihood for B：
+```
+
 ## 修正履歴
 [comment0624宮下]
 - L57からのif文ですがおそらく大きい方をmaxつまりL_Aにしようとしていますが少し違います。
