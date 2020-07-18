@@ -107,3 +107,7 @@ population variance (estimated)：
 
   もしくは，`extern`をつけないで関数本体をmain関数の前に書いてもいいですが，`extern`付きの関数本体はNGです．
 
+[comment0708宮下]
+
+修正点はありません。k01は完了です。
+
