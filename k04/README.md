@@ -38,7 +38,7 @@ Which ID's data do you want? : 45313124
 No data
 ```
 
-
+```
 Input the filename of sample height :c:\Users\admin\Documents\2020psp2\sample\heights.csv
 the filename of sample: c:\Users\admin\Documents\2020psp2\sample\heights.csv
 Input the filename of sample ID :c:\Users\admin\Documents\2020psp2\sample\IDs.csv
@@ -47,15 +47,22 @@ Which ID's data do you want? : 45313002
 ID : 45313002
 gender : Male
 height : 183.870000
+```
 
+```
 Input the filename of sample height :c:\Users\admin\Documents\2020psp2\sample\heights.csv
 the filename of sample: c:\Users\admin\Documents\2020psp2\sample\heights.csv
 Input the filename of sample ID :c:\Users\admin\Documents\2020psp2\sample\IDs.csv
 the filename of sample: c:\Users\admin\Documents\2020psp2\sample\IDs.csv
 Which ID's data do you want? : 35319034
 No data
+```
+
 ## 修正履歴
 
 [comment0720宮下]
 
 課題提出お疲れさまでした！修正点はありません。k04完了です。 
+
+[comment #20200720 sonoda]
+- 課題4の完了を確認
