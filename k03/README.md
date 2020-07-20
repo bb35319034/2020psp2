@@ -87,6 +87,7 @@ Num of dummy data: 5
 
 コンパイル時に`-DCONST_SEED`をつけない場合を以下に示す．
 
+```
 template mean: 170.8
 template standard deviation: 5.43
 Num of dummy data: 5
@@ -96,10 +97,13 @@ Num of dummy data: 5
 175.10
 174.52
 171.99
-
+```
 
 ## 修正履歴
 
 [comment0720宮下]
 
 課題提出お疲れさまでした！修正点はありません。k03完了です。 
+
+[comment #20200720 sonoda]
+- 課題3の完了を確認
