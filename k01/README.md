@@ -111,3 +111,5 @@ population variance (estimated)：
 
 修正点はありません。k01は完了です。
 
+[comment #20200720 sonoda]
+- 課題1の完了を確認しました（薗田）
