@@ -56,3 +56,6 @@ Which ID's data do you want? : 35319034
 No data
 ## 修正履歴
 
+[comment0720宮下]
+
+課題提出お疲れさまでした！修正点はありません。k04完了です。 
